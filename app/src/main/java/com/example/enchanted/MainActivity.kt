@@ -2,6 +2,9 @@ package com.example.enchanted
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
+import android.widget.Button
+import android.widget.Toast
 import androidx.appcompat.app.ActionBar
 import androidx.fragment.app.Fragment
 import kotlinx.android.synthetic.main.activity_main.*
@@ -33,5 +36,19 @@ class MainActivity : AppCompatActivity() {
             transaction.replace(R.id.frameLayout, fragment);
             transaction.commit();
         }
+    }
+
+    /** Called when the user touches the button */
+    fun dispense(view: View) {
+        Toast.makeText(this@MainActivity, "dispense.", Toast.LENGTH_SHORT).show()
+    }
+    fun interact(view: View) {
+        Toast.makeText(this@MainActivity, "interact.", Toast.LENGTH_SHORT).show()
+    }
+    fun snap(view: View) {
+        Toast.makeText(this@MainActivity, "snap", Toast.LENGTH_SHORT).show()
+    }
+    fun voice(view: View) {
+        Toast.makeText(this@MainActivity, "voice", Toast.LENGTH_SHORT).show()
     }
 }
